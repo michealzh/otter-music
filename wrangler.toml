@@ -1,9 +1,8 @@
 name = "otter-music"
 compatibility_date = "2026-06-01"
-main = "dist/sw.js"   # 或你的 Worker 入口文件，如果有
+pages_build_output_dir = "dist"
 
-# 静态资源配置（重要！让 Worker 能直接服务 dist/ 目录下的文件）
+# 支持 React SPA 路由（重要！）
 [assets]
 directory = "dist"
-binding = "ASSETS"
-not_found_handling = "single-page-application"   # 支持 React Router 等 SPA 路由
+not_found_handling = "single-page-application"
